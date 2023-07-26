@@ -5,7 +5,7 @@ import * as z from 'zod';
 
 import axios from 'axios';
 import Heading from '@/components/heading';
-import { MessageSquare, Music } from 'lucide-react';
+import { Music } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { formSchema } from './constants';
@@ -13,7 +13,7 @@ import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
-import { ChatCompletionRequestMessage } from 'openai';
+
 import { Empty } from '@/components/empty';
 import { Loader } from '@/components/loader';
 
