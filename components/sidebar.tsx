@@ -14,7 +14,7 @@ import {
   Settings,
   VideoIcon,
 } from 'lucide-react';
-import FreeCounter from '@/components/freecounter';
+import FreeCounter from '@/components/free-counter';
 
 const montserrat = Montserrat({ weight: '600', subsets: ['latin'] });
 
@@ -64,9 +64,10 @@ const routes = [
 
 interface SidebarProps {
   apiLimitCount: number;
+  isPro: boolean;
 }
 
-const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
+const Sidebar = ({ apiLimitCount = 0, isPro = false }: SidebarProps) => {
   const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
@@ -99,7 +100,7 @@ const Sidebar = ({ apiLimitCount = 0 }: SidebarProps) => {
           ))}
         </nav>
       </div>
-      <FreeCounter apiLimitCount={apiLimitCount} />
+      <FreeCounter isPro={isPro} apiLimitCount={apiLimitCount} />
     </div>
   );
 };
